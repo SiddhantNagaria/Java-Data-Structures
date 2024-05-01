@@ -1,0 +1,48 @@
+class Node{
+    int data;
+    Node next;
+}
+class LL{
+    Node head;
+    LL(){
+        head = null;
+    }
+    void insertAtLast(int newData){
+        Node newNode = new Node();
+        newNode.data = newData;
+        newNode.next = null;
+        if(head == null){
+            head = newNode;
+        }
+        else{
+            Node temp = new Node();
+            temp = head;
+            while(temp.next!=null)
+                temp = temp.next;
+            temp.next= newNode;
+        }
+    }
+    void display(){
+        Node temp = new Node();
+        temp = this.head;
+        if(temp!=null){
+            System.out.println("elements in the list are : ");
+            while(temp!=null){
+                System.out.print(temp.data + " ");
+                temp = temp.next;
+            }
+        }
+        else{
+            System.out.println("the list is empty");
+        }
+    }
+}
+class Test{
+    public static void main(String[] args) {
+        LL list = new LL();
+        list.insertAtLast(10);
+        list.insertAtLast(20);
+        list.insertAtLast(30);
+        list.display();
+    }
+}

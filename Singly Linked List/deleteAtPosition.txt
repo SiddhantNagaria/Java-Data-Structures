@@ -1,0 +1,81 @@
+class Node{
+    int data;
+    Node next;
+}
+class LL{
+    Node head;
+    LL(){
+        head = null;
+    }
+
+    void insertAtLast(int newData){
+        Node newNode = new Node();
+        newNode.data = newData;
+        newNode.next = null;
+        if(head == null){
+            head = newNode;
+        }
+        else{
+            Node temp = new Node();
+            temp = head;
+            while(temp.next!=null)
+                temp = temp.next;
+            temp.next= newNode;
+        }
+    }
+
+    void deleteAtPosition(int pos){
+        if(pos<1){
+            System.out.println("position should be greater than equal to 1");
+        }
+        else if (pos == 1 && head != null ) {
+            Node nodeToDelete = head;
+            head = head.next;
+            nodeToDelete = null;
+        }
+        else{
+            Node temp = new Node();
+            temp = head;
+            for(int i = 1; i < pos -1 ; i++){
+                if(temp!=null){
+                    temp= temp.next;
+                }
+            }
+            if(temp != null && temp.next!= null){
+                Node nodeToDelete = temp.next;
+                temp.next = temp.next.next;
+                nodeToDelete = null;
+            }
+            else{
+                System.out.println("Node is null");
+            }
+        }
+    }
+
+    void display(){
+        Node temp = new Node();
+        temp = this.head;
+        if(temp!=null){
+            System.out.println("elements in the list are : ");
+            while(temp!=null){
+                System.out.print(temp.data + " ");
+                temp = temp.next;
+            }
+        }
+        else{
+            System.out.println("the list is empty");
+        }
+    }
+}
+class Test{
+    public static void main(String[] args) {
+        LL list = new LL();
+        list.insertAtLast(10);
+        list.insertAtLast(20);
+        list.insertAtLast(30);
+        list.display();
+        System.out.println();
+        list.deleteAtPosition(1);
+        list.display();
+    }
+}

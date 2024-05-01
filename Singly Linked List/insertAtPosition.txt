@@ -1,0 +1,61 @@
+class Node{
+    int data;
+    Node next;
+}
+class LL{
+    Node head;
+    LL(){
+        head = null;
+    }
+    void insertAtPosition(int newData, int pos){
+        Node newNode = new Node();
+        newNode.data = newData;
+        newNode.next = null;
+        if(pos <1 ){
+            System.out.println("inert position >=1");
+        }
+        else if (pos==1) {
+            newNode.next = head;
+            head = newNode;
+        }
+        else{
+            Node temp = new Node();
+            temp = head;
+            for(int i = 1; i < pos -1 ; i++){
+                if(temp != null){
+                    temp = temp.next;
+                }
+            }
+            if(temp!=null) {
+                newNode.next = temp.next;
+                temp.next = newNode;
+            }
+            else{
+                System.out.println("the previous node is null");
+            }
+        }
+    }
+    void display(){
+        Node temp = new Node();
+        temp = this.head;
+        if(temp!=null){
+            System.out.println("elements in the list are : ");
+            while(temp!=null){
+                System.out.print(temp.data + " ");
+                temp = temp.next;
+            }
+        }
+        else{
+            System.out.println("the list is empty");
+        }
+    }
+}
+class Test{
+    public static void main(String[] args) {
+        LL list = new LL();
+        list.insertAtPosition(10, 1);
+        list.insertAtPosition(20,2);
+        list.insertAtPosition(30, 3);
+        list.display();
+    }
+}
