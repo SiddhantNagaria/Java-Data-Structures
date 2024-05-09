@@ -9,7 +9,7 @@ public class CompareTwoNumbers {
             System.out.println(num2 + " is greater");
         }
         else{
-            System.out.println("both are equal");
+            System.out.println("both are equals");
         }
     }
 }
