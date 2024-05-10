@@ -13,5 +13,6 @@ public class PrimeNumber {
         if(flag == 0){
             System.out.println("it is prime");
         }
+        
     }
 }
