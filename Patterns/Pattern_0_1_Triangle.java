@@ -1,3 +1,5 @@
+package Patterns;
+
 public class Pattern_0_1_Triangle {
     public static void main(String[] args) {
         int n = 5;
