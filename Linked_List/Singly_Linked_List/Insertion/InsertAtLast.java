@@ -14,7 +14,7 @@ public class InsertAtLast {
     public static Node head;
     public static Node tail;
 
-    public void addFirst(int data) {
+    public void addLast(int data) {
         Node newNode = new Node(data);
         if (head == null) {
             head = tail = newNode;
@@ -25,9 +25,8 @@ public class InsertAtLast {
     }
 
     public static void main(String args[]) {
-        InsertAtBegin list = new InsertAtBegin();
-        list.addFirst(10);
-        list.addFirst(20);
-        list.addFirst(30);
+        InsertAtLast list = new InsertAtLast();
+        list.addLast(40);
+        list.addLast(50);
     }
 }
