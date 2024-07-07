@@ -20,7 +20,7 @@ class InsertAtMiddle {
         }
     }
     public void insertAtMiddle(int idx, int data) {
-        if (idx < 1) {
+        if (idx < 0) {
             System.out.println("Invalid index");
         } else if (idx == 0) {
             addFirst(data);
@@ -44,5 +44,14 @@ class InsertAtMiddle {
             temp = temp.next;
         }
         System.out.println();
+    }
+    public static void main(String[] args) {
+        InsertAtMiddle list = new InsertAtMiddle();
+        list.addFirst(1);
+        list.addFirst(2);
+        list.addFirst(3);
+        list.printList();
+        list.insertAtMiddle(2, 4);
+        list.printList();
     }
 }
