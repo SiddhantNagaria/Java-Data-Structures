@@ -1,6 +1,4 @@
-
-
-class deleteFirst{
+class deleteAtPosition{
     public static class Node{
         int data;
         Node next;
@@ -22,12 +20,30 @@ class deleteFirst{
             head = newNode;
         }
     }
-
-    public void DeleteFirst(){
-        if(this.head!=null){
-            Node temp = this.head;
-            this.head = this.head.next;
-            temp = null;
+    public void deleteAtPos(int position){
+        if(position<1){
+            System.out.println("Invalid position");
+        }
+        else if(position==1 && head!=null){
+            Node nodeToDelete = head;
+            head= head.next;
+            nodeToDelete = null;
+        }
+        else{
+            Node temp = head;
+            for(int i = 1; i<position-1; i++){
+                if(temp!=null){
+                    temp = temp.next;
+                }
+            }
+            if(temp!=null && temp.next!=null){
+                Node nodeToDelete = temp.next;
+                temp.next = temp.next.next;
+                nodeToDelete = null;
+            }
+            else{
+                System.out.println("The node is null");
+            }
         }
     }
 
@@ -44,12 +60,12 @@ class deleteFirst{
         }
     }
     public static void main(String[] args) {
-        deleteFirst list = new deleteFirst();
+        deleteAtPosition list = new deleteAtPosition();
         list.addFirst(10);
         list.addFirst(20);
         list.addFirst(30);
         list.printlist();
-        list.DeleteFirst();
+        list.deleteAtPos(7);
         list.printlist();
     }
 }
