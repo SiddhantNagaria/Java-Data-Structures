@@ -22,7 +22,7 @@ class DeleteAtPos {
             noOfELem++;
             temp = temp.next;
         }
-        while (temp.next != null) {
+        while (temp.next != head) {
             temp = temp.next;
         }
         if (pos < 1 || pos > noOfELem) {
