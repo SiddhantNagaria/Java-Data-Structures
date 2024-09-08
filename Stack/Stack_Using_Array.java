@@ -35,6 +35,14 @@ class Stack {
             System.out.println("Stack is empty");
         }
     }
+
+    //get top element
+    public int getTop() {
+        if(top<0){
+            System.out.println("Stack is empty");
+        }
+        return stack[top];
+    }
 }
 
 public class Stack_Using_Array{
