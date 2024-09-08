@@ -8,7 +8,8 @@ public class Stack_Using_ArrayList {
         static ArrayList<Integer> list = new ArrayList<>();
 
         public static boolean isEmpty() {
-            return list.size() == 0;
+            // return list.size() == 0;
+            return list.isEmpty();
         }
 
         //push
