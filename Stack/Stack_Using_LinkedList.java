@@ -13,6 +13,7 @@ class Stack_Using_LinkedList{
         }
         
         //push
+        
         public Node push(Node top, int data){
             Node newNode = new Node(data);
             if(top == null){
