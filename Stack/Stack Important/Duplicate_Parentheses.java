@@ -29,7 +29,7 @@ public class Duplicate_Parentheses{
     public static void main(String[] args) {
         //valid string
         String str1 = "((a+b))"; //true its a duplicate parentheses
-        String str2 = "((a+b)+(c+d))";
+        String str2 = "((a+b)+(c+d))";// false , its not duplicate parentheses
         System.out.println(isDuplicate(str2));
     }
 }
