@@ -1,6 +1,4 @@
-
 import java.util.Stack;
-
 public class Valid_Parentheses{
     public static boolean isValid(String str) {
         Stack<Character> s = new Stack<>();
@@ -28,6 +26,7 @@ public class Valid_Parentheses{
             return false;
         }
     }
+    
     public static void main(String[] args) {
         String str="({})[]";
         System.out.println(isValid(str));
