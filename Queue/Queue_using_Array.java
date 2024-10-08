@@ -33,7 +33,7 @@ class Queue_using_Array{
     //delete element
     void Dequeue(){
         if(isEmpty()){
-            System.err.println("Queue is empty");
+            System.out.println("Queue is empty");
         }else{
             int x = queue[++front];
             System.out.println(x + "is deleted from queue");
