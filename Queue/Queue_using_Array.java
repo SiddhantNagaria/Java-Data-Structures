@@ -21,7 +21,7 @@ class Queue_using_Array{
     //insert element in queue
     void Enque(int data){
         if(rear ==(Max-1)){
-            System.err.println("Queue size limit");
+            System.out.println("Queue size limit");
         }
         else{
             rear++;
@@ -35,8 +35,9 @@ class Queue_using_Array{
         if(isEmpty()){
             System.out.println("Queue is empty");
         }else{
-            int x = queue[++front];
-            System.out.println(x + "is deleted from queue");
+            int x = queue[front];
+            front++;
+            System.out.println(x + " is deleted from queue");
         }
     }
 
@@ -66,6 +67,7 @@ class Queue_using_Array{
         queue.Enque(10);
         queue.Enque(20);
         queue.Enque(30);
+        queue.Dequeue();
         queue.isEmpty();
         queue.rearElement();
 
