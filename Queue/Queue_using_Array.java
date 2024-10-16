@@ -36,7 +36,7 @@ class Queue_using_Array{
             System.out.println("Queue is empty");
         }else{
             int x = queue[front];
-            front++;
+            front = (front + 1) % queue.length;
             System.out.println(x + " is deleted from queue");
         }
     }
