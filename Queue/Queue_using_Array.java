@@ -13,7 +13,7 @@ class Queue_using_Array{
         return rear == -1;
     }
 
-    //if queue is empty
+    //return number of elements
     int size(){
         return (rear -front);
     }
