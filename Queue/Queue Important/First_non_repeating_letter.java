@@ -27,6 +27,6 @@ class First_non_repeating_letter {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
-
+        printNonRepeating(str);
     }
 }
