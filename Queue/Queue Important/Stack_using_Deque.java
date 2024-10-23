@@ -15,6 +15,7 @@ class Stack_using_Deque{
             return deque.removeLast();
         }
 
+
         public int peek(){
             return deque.getLast();
         }
