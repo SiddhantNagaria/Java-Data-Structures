@@ -59,5 +59,6 @@ class Lowest_common_ancestor_in_binary_tree{
         root.right.right = new Node(7);
         int n1 = 4;
         int n2 = 5;
+        System.out.println(LCA(root, n1, n2));
     }
 }
