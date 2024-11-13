@@ -40,13 +40,12 @@ public class Minimum_distance_between_two_nodes_in_BT {
         if (left == -1 && right == -1) {
             return -1;
         }
-        if (left == -1) {
+        else if (left == -1) {
             return right + 1;
         }
-        if (right == -1) {
+        else { // if(right == -1)
             return left + 1;
         }
-        return Math.min(left, right) + 1;
     }
 
     static int min_distance(Node root, int n1, int n2) {
