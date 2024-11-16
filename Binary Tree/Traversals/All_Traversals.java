@@ -1,5 +1,7 @@
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 class All_Traversals {
@@ -111,12 +113,45 @@ class All_Traversals {
                 } else if (curr.left == prev) {
                     if (curr.right != null) {
                         s.push(curr.right);
-                    } else {
-                        list.add(curr.data);
-                        s.pop();
                     }
+                } else {
+                    list.add(curr.data);
+                    s.pop();
                 }
                 prev = curr;
+            }
+        }
+        return list;
+    }
+
+    //levelorder iterative
+
+    public ArrayList<ArrayList<Integer>> LevelOrder(Node root) {
+        ArrayList<ArrayList<Integer>> list = new ArrayList<ArrayList<Integer>>();
+        if (root == null) {
+            return list;
+        }
+        Queue<Node> q = new LinkedList<Node>();
+        q.offer(root);
+        q.offer(null);
+        ArrayList<Integer> curr = new ArrayList<>();
+        while (!q.isEmpty()) {
+            Node temp = q.poll();
+            if (temp != null) {
+                curr.add(temp.data);
+            }
+            if (temp.left != null) {
+                q.offer(temp.left);
+            }
+            if (temp.right != null) {
+                q.offer(temp.right);
+            } else {
+                ArrayList<Integer> c_curr = new ArrayList<Integer>(curr);
+                list.add(c_curr);
+                curr.clear();
+                if (!q.isEmpty()) {
+                    q.offer(null);
+                }
             }
         }
         return list;
