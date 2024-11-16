@@ -48,10 +48,80 @@ class All_Traversals {
         }
         return list;
     }
-    
+
     //inorder recursion
-    
-    
-    public static void main(String[] args) {    
-   }
+    public void InOrder(Node root) {
+        if (root == null) {
+            System.out.println("tree is empty");
+        }
+        InOrder(root.left);
+        System.out.print(root.data + " ");
+        InOrder(root.right);
+    }
+
+    //inorder iterative
+    public ArrayList<Integer> InOrderIterative(Node root) {
+        ArrayList<Integer> list = new ArrayList<>();
+        Stack<Node> s = new Stack<>();
+        Node curr = root;
+        boolean done = false;
+        while (!done) {
+            if (curr != null) {
+                s.push(curr);
+                curr = curr.left;
+            } else {
+                if (s.isEmpty()) {
+                    done = true;
+                } else {
+                    curr = s.pop();
+                    list.add(curr.data);
+                    curr = curr.right;
+                }
+            }
+        }
+        return list;
+    }
+
+    //postorder recursion
+    public void PostOrder(Node root) {
+        if (root == null) {
+            System.out.println("tree is empty");
+        }
+        PostOrder(root.left);
+        PostOrder(root.right);
+        System.out.print(root.data + " ");
+    }
+
+    //postorder iterative
+    public ArrayList<Integer> postOrderIterative(Node root) {
+        ArrayList<Integer> list = new ArrayList<>();
+        if (root == null) {
+            System.out.println("tree is empty");
+        }
+        Stack<Node> s = new Stack<>();
+        s.push(root);
+        Node prev = null;
+        while (!s.isEmpty()) {
+            Node curr = s.peek();
+            if (prev == null || prev.left == curr || prev.right == curr) {
+                if (curr.left != null) {
+                    s.push(curr.left);
+                } else if (curr.right != null) {
+                    s.push(curr.right);
+                } else if (curr.left == prev) {
+                    if (curr.right != null) {
+                        s.push(curr.right);
+                    } else {
+                        list.add(curr.data);
+                        s.pop();
+                    }
+                }
+                prev = curr;
+            }
+        }
+        return list;
+    }
+
+    public static void main(String[] args) {
+    }
 }
