@@ -5,7 +5,7 @@ class Print_num_from_n_to_1{
             System.out.println(n);
             return;
         }
-        System.err.println(n + " ");
+        System.out.println(n + " ");
         print(n-1);
     }
     public static void main(String[] args) {
