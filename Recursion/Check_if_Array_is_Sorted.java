@@ -1,6 +1,6 @@
 class Check_if_Array_is_Sorted{
     public static boolean isSorted(int arr[], int i){
-        if(i==arr.length-1){
+        if(i==arr.length-1){ // n=5, i=4 :: 5-1 = 4 == 4
             return true;
         }
         if(arr[i]>arr[i+1]){
