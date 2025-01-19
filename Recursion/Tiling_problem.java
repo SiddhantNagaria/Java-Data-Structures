@@ -13,7 +13,8 @@ class Tiling_problem{
         //total
         int total = fnm1 + fnm2;
         return total;
-        //return fnm1 + fnm2;
+
+        // return tilingProblem(n-1) + tilingProblem(n-2);
     }
     public static void main(String[] args) {
         int n = 4;
