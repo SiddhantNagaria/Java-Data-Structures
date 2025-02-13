@@ -1,6 +1,4 @@
-
 import java.util.PriorityQueue;
-
 class Remove_from_heap{
     public static void main(String[] args) {
         PriorityQueue<Integer> pq = new PriorityQueue<>();
