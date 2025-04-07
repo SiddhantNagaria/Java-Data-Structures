@@ -13,7 +13,7 @@ class K_nearest_cars{
         }
         @Override
         public int compareTo(Point p2){
-            return this.dist - p2.dist; //min heap or acseding order
+            return this.dist - p2.dist; //min heap or ascending order
         }
     }
     public static void main(String[] args) {
