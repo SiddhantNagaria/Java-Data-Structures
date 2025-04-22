@@ -12,6 +12,9 @@ public class Hashing {
         hm.put("Nepal", 300);
         hm.put("Srilanka", 400);
 
+        //get value
+        System.out.println(hm.get("India"));
+        
         
         
     }
