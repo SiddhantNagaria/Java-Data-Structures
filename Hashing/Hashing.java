@@ -17,7 +17,16 @@ public class Hashing {
         
         //cotains key - O(1)
         System.out.print(hm.containsKey("India"));
+        System.out.print(hm.containsKey("Indonesia"));
         
-        
+        //remove
+        System.out.print(hm.remove("India"));
+        System.out.print(hm);
+
+        //size
+        System.out.println(hm.size());
+
+        //is empty
+        System.out.println(hm.isEmpty());
     }
 }
