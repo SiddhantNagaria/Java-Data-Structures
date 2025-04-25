@@ -28,5 +28,9 @@ public class Hashing {
 
         //is empty
         System.out.println(hm.isEmpty());
+
+        //clear
+        hm.clear();
+        System.out.println(hm);
     }
 }
