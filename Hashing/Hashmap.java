@@ -1,7 +1,7 @@
 
 import java.util.HashMap;
 
-public class Hashing {
+public class Hashmap {
     public static void main(String[] args) {
         //create a hash map
         HashMap<String, Integer> hm = new HashMap<>();
