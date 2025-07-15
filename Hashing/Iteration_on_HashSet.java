@@ -10,8 +10,12 @@ public class Iteration_on_HashSet {
         cities.add("noida");
 
         Iterator it = cities.iterator();
-        while(it.hasNext()){
+        while (it.hasNext()) {
             System.out.println(it.next());
+        }
+
+        for (String city : cities) {
+            System.out.println(city);
         }
     }
 }
